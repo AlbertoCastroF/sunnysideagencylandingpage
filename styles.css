@@ -1,0 +1,508 @@
+/* BORDER BOX TO PREVENT UNWANTED BEHAVIORS */
+* {
+  box-sizing: border-box;
+}
+
+/* FONTS AND COLORS USED  */
+:root {
+  /* PRIMARY */
+  --Soft-red: hsl(7, 99%, 70%);
+  --Soft-red-active: hsl(7, 99%, 50%);
+  --yellow: hsl(51, 100%, 49%);
+  --yellow-active: hsl(51, 100%, 30%);
+  --dark-desaturated-cyan: hsl(167, 40%, 24%); /*graphic design text*/
+  --dark-blue: hsl(198, 62%, 26%); /*photography text*/
+  --dark-moderate-cyan: hsl(168, 34%, 41%); /*footer*/
+  --footer-background: hsl(169, 39%, 67%);
+  /*NEUTRAL*/
+  --very-dark-desaturated-blue: hsl(212, 27%, 19%);
+  --very-dark-grayish-blue: hsl(213, 9%, 39%);
+  --dark-grayish-blue: hsl(232, 10%, 55%);
+  --grayish-blue: hsl(210, 4%, 67%);
+  --white: hsl(0, 0%, 100%);
+  /* FONT FAMILIES */
+  --barlow: "Barlow", sans-serif;
+  --fraunces: "Fraunces", sans-serif;
+}
+
+/* GENERAL STYLES  */
+body {
+  margin: 0;
+  font-size: 18px;
+  font-family: var(--barlow);
+  font-weight: 600;
+}
+
+/* HEADER */
+.header {
+  min-height: 100vh;
+  padding: 1rem 2rem;
+  background-image: url("./projectSpecifications/images/mobile/image-header.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.hamburger {
+  display: none;
+  background-color: transparent;
+  border: 0;
+  color: var(--white);
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+.hamburger:focus {
+  outline: none;
+}
+
+.header-nav {
+  margin-bottom: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  font-family: "Fraunces", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 5px;
+  color: var(--white);
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-side-menu {
+  width: 470px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--white);
+}
+
+.nav-side-menu > h3 {
+  cursor: pointer;
+}
+
+.nav-contact {
+  color: var(--very-dark-desaturated-blue);
+  text-transform: uppercase;
+  font-family: var(--fraunces);
+  background-color: var(--white);
+  border-radius: 25px;
+  font-size: 0.9rem;
+  padding: 1em 2em;
+}
+
+.nav-contact:hover {
+  color: var(--white);
+  background-color: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+}
+
+.arrow {
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.arrow > img {
+  height: 200px;
+}
+
+@media (max-width: 900px) {
+  .nav-side-menu {
+    width: 300px;
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    background-color: var(--white);
+    color: var(--very-dark-grayish-blue);
+    top: 5rem;
+    left: calc(50% - 150px);
+  }
+
+  .nav-contact {
+    background-color: var(--yellow);
+  }
+
+  .nav-side-menu.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+/* CONTAINERS WITH MAIN CONTENT */
+
+.element-1,
+.element-3,
+.element-5,
+.element-6,
+.element-9,
+.element-10,
+.element-11,
+.element-12 {
+  width: 100%;
+  height: 300px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.element-2,
+.element-4 {
+  height: 400px;
+}
+
+.element-1 {
+  background-image: url("./projectSpecifications/images/mobile/image-transform.jpg");
+}
+
+.element-3 {
+  background-image: url("./projectSpecifications/images/mobile/image-stand-out.jpg");
+}
+
+.element-5 {
+  background-image: url("./projectSpecifications/images/mobile/image-graphic-design.jpg");
+}
+.element-6 {
+  background-image: url("./projectSpecifications/images/mobile/image-photography.jpg");
+}
+
+.element-9,
+.element-10,
+.element-11,
+.element-12 {
+  height: 200px;
+}
+
+.element-9 {
+  background-image: url("./projectSpecifications/images/mobile/image-gallery-milkbottles.jpg");
+}
+
+.element-10 {
+  background-image: url("./projectSpecifications/images/mobile/image-gallery-orange.jpg");
+}
+
+.element-11 {
+  background-image: url("./projectSpecifications/images/mobile/image-gallery-cone.jpg");
+}
+
+.element-12 {
+  background-image: url("./projectSpecifications/images/mobile/image-gallery-sugar-cubes.jpg");
+}
+
+.element-container1,
+.element-container2 {
+  display: flex;
+}
+
+.element {
+  padding: 1.3rem;
+}
+
+.element-2,
+.element-4,
+.element-5,
+.element-6 {
+  text-align: center;
+}
+
+.element-5,
+.element-6 {
+  height: 580px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.element-2 > h2,
+.element-4 > h2 {
+  font-size: 2rem;
+  color: var(--very-dark-desaturated-blue);
+}
+
+.element-5 > h2,
+.element-6 > h2 {
+  font-size: 1.5rem;
+}
+
+.element-5 {
+  color: var(--dark-desaturated-cyan);
+}
+
+.element-6 {
+  color: var(--dark-blue);
+}
+
+.element-2 > h2,
+.element-4 > h2,
+.element-5 > h2,
+.element-6 > h2 {
+  font-weight: 900;
+  font-family: var(--fraunces);
+}
+
+.element-2 > p,
+.element-4 > p {
+  color: var(--dark-grayish-blue);
+  line-height: 1.5;
+}
+
+.element-5 > p,
+.element-6 > p {
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.learn {
+  position: relative;
+  font-family: var(--fraunces);
+  color: var(--very-dark-desaturated-blue);
+  font-weight: 900;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.learnyellow::after {
+  position: absolute;
+  content: "";
+  border-radius: 5px;
+  background-color: var(--yellow);
+  inset: 0;
+  height: 10px;
+  z-index: -1;
+  top: 11px;
+  opacity: 0.3;
+}
+
+.learnyellow:hover::after {
+  background-color: var(--yellow-active);
+}
+.learnred:hover::after {
+  background-color: var(--Soft-red-active);
+}
+
+.learnred::after {
+  position: absolute;
+  content: "";
+  border-radius: 5px;
+  background-color: var(--Soft-red);
+  inset: 0;
+  height: 10px;
+  z-index: -1;
+  top: 11px;
+  opacity: 0.3;
+}
+
+/* TESTIMONIALS */
+
+.testimonials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1.3rem;
+}
+
+.testimonials-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.testimonials > p {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  font-family: var(--fraunces);
+  letter-spacing: 3px;
+  color: var(--grayish-blue);
+  text-transform: uppercase;
+}
+
+.testimonial {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.testimonial > img {
+  width: 100px;
+  border-radius: 50%;
+}
+
+.testimonial-text {
+  color: var(--dark-grayish-blue);
+  line-height: 1.8;
+}
+
+.name {
+  margin-bottom: 0;
+  font-family: var(--fraunces);
+  font-weight: 900;
+}
+
+.title {
+  font-size: 0.9rem;
+  color: var(--grayish-blue);
+}
+
+/* FOOTER */
+
+footer {
+  padding: 1rem;
+  color: var(--dark-desaturated-cyan);
+  background-color: var(--footer-background);
+  text-align: center;
+}
+
+footer > h3 {
+  font-size: 2rem;
+  font-family: var(--fraunces);
+  font-weight: 900;
+}
+
+.footer-menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+
+.footer-menu > p:hover {
+  color: var(--white);
+  cursor: pointer;
+}
+
+.icons {
+  width: 150px;
+  margin: 3rem auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+/* MEDIA QUERY */
+
+@media (min-width: 600px) {
+  .header {
+    background-image: url("./projectSpecifications/images/desktop/image-header.jpg");
+  }
+
+  .element-1 {
+    background-image: url("./projectSpecifications/images/desktop/image-transform.jpg");
+  }
+  .element-3 {
+    background-image: url("./projectSpecifications/images/desktop/image-stand-out.jpg");
+  }
+  .element-5 {
+    background-image: url("./projectSpecifications/images/desktop/image-graphic-design.jpg");
+  }
+  .element-6 {
+    background-image: url("./projectSpecifications/images/desktop/image-photography.jpg");
+  }
+  .element-9 {
+    background-image: url("./projectSpecifications/images/desktop/image-gallery-milkbottles.jpg");
+  }
+  .element-10 {
+    background-image: url("./projectSpecifications/images/desktop/image-gallery-orange.jpg");
+  }
+  .element-11 {
+    background-image: url("./projectSpecifications/images/desktop/image-gallery-cone.jpg");
+  }
+  .element-12 {
+    background-image: url("./projectSpecifications/images/desktop/image-gallery-sugarcubes.jpg");
+  }
+
+  .main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .arrow {
+    margin-top: -80px;
+  }
+
+  .testimonials {
+    grid-column: span 2;
+  }
+
+  .testimonial {
+    padding: 2rem;
+  }
+
+  .testimonials-container {
+    flex-direction: row;
+  }
+
+  .element-1,
+  .element-2,
+  .element-4,
+  .element-3,
+  .element-5,
+  .element-6 {
+    height: 500px;
+  }
+
+  .element-container1,
+  .element-container2,
+  .element-9,
+  .element-10,
+  .element-11,
+  .element-12 {
+    height: 400px;
+  }
+
+  .element-2 {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+
+  .element-2,
+  .element-4 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    text-align: left;
+    padding: 15%;
+  }
+
+  .element-5,
+  .element-6 {
+    padding: 1rem 15%;
+  }
+
+  .element-5 > p,
+  .element-6 > p {
+    font-size: 1rem;
+  }
+
+  .footer-menu {
+    width: 400px;
+    margin: 0 auto;
+  }
+}
