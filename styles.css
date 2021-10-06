@@ -118,6 +118,7 @@ nav {
   height: 200px;
 }
 
+/* NAV SIDE MENU MEDIA QUERY FOR TOGGLE */
 @media (max-width: 900px) {
   .nav-side-menu {
     width: 300px;
@@ -132,6 +133,12 @@ nav {
 
   .nav-contact {
     background-color: var(--yellow);
+  }
+
+  .nav-contact:hover {
+    color: var(--white);
+    background-color: var(--very-dark-desaturated-blue);
+    cursor: pointer;
   }
 
   .nav-side-menu.show {
